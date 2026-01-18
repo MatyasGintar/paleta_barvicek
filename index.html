@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelectorAll('.color-change').forEach(function (button) {
+                button.onclick = function () {
+                    document.querySelector('#obrazek').style.backgroundColor = button.dataset.color;
+                    document.querySelector('#obrazek').textContent = button.dataset.color;
+                };
+            });
+                document.querySelectorAll('.background').forEach(function (button) {
+                    button.onclick = function () {
+                        document.querySelector('body').style.backgroundColor = this.dataset.color;
+                    };
+                });
+        });
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <title>barvicky</title>
+</head>
+
+<body>
+    <h1>Vyber si barvicku</h1>
+        <div id="obrazek">obrazek</div>
+    <ul class="color-change">
+        <li><button class="color-change" data-color="red">Červená</button></li>
+        <li><button class="color-change" data-color="blue">Modrá</button></li>
+        <li><button class="color-change" data-color="green">Zelená</button></li>
+        <li><button class="color-change" data-color="yellow">Žlutá</button></li>
+        <li><button class="color-change" data-color="purple">Fialová</button></li>
+        <li><button class="color-change" data-color="pink">Růžová</button></li>
+    </ul>
+    <button class="background" data-color="gray">tmavý režim</button>
+    <button class="background" data-color="white">světlý režim</button>
+
+</body>
+
+</html>
