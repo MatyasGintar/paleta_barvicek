@@ -1,42 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            document.querySelectorAll('.color-change').forEach(function (button) {
-                button.onclick = function () {
-                    document.querySelector('#obrazek').style.backgroundColor = button.dataset.color;
-                    document.querySelector('#obrazek').textContent = button.dataset.color;
-                };
-            });
-                document.querySelectorAll('.background').forEach(function (button) {
-                    button.onclick = function () {
-                        document.querySelector('body').style.backgroundColor = this.dataset.color;
-                    };
-                });
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".color-change").forEach(function (button) {
+          button.onclick = function () {
+            document.querySelector("#obrazek").style.backgroundColor =
+              button.dataset.color;
+            document.querySelector("#obrazek").textContent =
+              button.dataset.color;
+          };
         });
+        document.querySelectorAll(".background").forEach(function (button) {
+          button.onclick = function () {
+            document.querySelector("body").style.backgroundColor =
+              this.dataset.color;
+          };
+        });
+      });
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>barvicky</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>Vyber si barvicku</h1>
-        <div id="obrazek">obrazek</div>
+    <div id="obrazek">obrazek</div>
     <ul class="color-change">
-        <li><button class="color-change" data-color="red">Červená</button></li>
-        <li><button class="color-change" data-color="blue">Modrá</button></li>
-        <li><button class="color-change" data-color="green">Zelená</button></li>
-        <li><button class="color-change" data-color="yellow">Žlutá</button></li>
-        <li><button class="color-change" data-color="purple">Fialová</button></li>
-        <li><button class="color-change" data-color="pink">Růžová</button></li>
+      <li><button class="color-change" data-color="red">Červená</button></li>
+      <li><button class="color-change" data-color="blue">Modrá</button></li>
+      <li><button class="color-change" data-color="green">Zelená</button></li>
+      <li><button class="color-change" data-color="yellow">Žlutá</button></li>
+      <li><button class="color-change" data-color="purple">Fialová</button></li>
+      <li><button class="color-change" data-color="pink">Růžová</button></li>
     </ul>
     <button class="background" data-color="gray">tmavý režim</button>
     <button class="background" data-color="white">světlý režim</button>
-
-</body>
-
+    
+    <footer>
+      <p>
+      <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmatyasgintar.github.io%2Fpaleta_barvicek%2F">
+        <img style="border:0;width:88px;height:31px"
+            src="valid-html40-blue.png"
+            alt="Ověřit HTML!" />
+      </a>
+      </p>
+      <p>
+      <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmatyasgintar.github.io%2Fpaleta_barvicek%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=cs">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Ověřit CSS!" />
+      </a>
+      </p>
+    </footer>
+  </body>
 </html>
